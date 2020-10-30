@@ -66,20 +66,21 @@ Running in production:
 **streetArts**
 
 *returns all street art in the database*
+```
+query {
 
-  `query {
+  streetArts {
 
-     streetArts {
+    id
 
-         id
+    latitude
 
-         latitude
+    longitude
 
-         longitude
+  }
 
-     }
-
-  }`
+}
+```
 
 --- 
 
@@ -90,18 +91,19 @@ Sample response:
 **users**
 
 *returns all users*
+```
+query {
 
-  `query {
+  users {
 
-     users {
+    id
 
-         id
+    username
 
-         username
+  }
 
-     }
-
-  }`
+}
+```
   
 ---
 
@@ -114,48 +116,49 @@ Sample response:
 **createStreetArt**
 
 *Adds a street art object to the database*
+```
+mutation {
 
-  `mutation {
+  createStreetArt( input: {
 
-        createStreetArt( input: {
+    userId: 2
 
-          userId: 2
+    latitude: "42.287365"
 
-          latitude: "42.287365"
+    longitude: "-89.064301"
 
-          longitude: "-89.064301"
+    address: "Rock River Bike Path"
 
-          address: "Rock River Bike Path"
+    city: "Rockford"
 
-          city: "Rockford"
+    state: "IL"
 
-          state: "IL"
+    zipcode: "61107"
 
-          zipcode: "61107"
+    description: "Symbol is distracting from a distance yet overwhelming up-close. It stands forty-seven feet tall with a weight of thirty tons"
 
-          description: "Symbol is distracting from a distance yet overwhelming up-close. It stands forty-seven feet tall with a weight of thirty tons"
+    artistName: "Alexander Liberman"
 
-          artistName: "Alexander Liberman"
+    artName: "Symbol"
 
-          artName: "Symbol"
+    imageUrls: "['https://townsquare.media/site/721/files/2016/02/12714350_10207010501954253_1570886039_n.jpg?w=980&q=75']"
 
-          imageUrls: "['https://townsquare.media/site/721/files/2016/02/12714350_10207010501954253_1570886039_n.jpg?w=980&q=75']"
+  }) {
 
-        }) {
+    id
 
-            id
+    latitude
 
-            latitude
+    longitude
 
-            longitude
+    city
 
-            city
+    artName
 
-            artName
+  }
 
-            }
-
-      }`
+}
+```
 
 ---
 
@@ -166,24 +169,25 @@ Sample response:
 **favoriteStreetArt**
 
 *Toggles favorite status for street art between true and false*
+```
+mutation {
 
-  `mutation {
+  favoriteStreetArt( input: {
 
-       favoriteStreetArt( input: {
+    streetArtId: 2
 
-         streetArtId: 2
+    favorite: true
 
-         favorite: true
+  }) {
 
-       }) {
+    id
 
-           id
+    favorite
 
-           favorite
+  }
 
-           }
-
-     }`
+}
+```
 
 ---
 
@@ -194,26 +198,27 @@ Sample response:
 **visitStreetArt**
 
 *Toggles visited status for street art between true and false*
+```
+mutation {
 
-  `mutation {
+  visitStreetArt( input: {
 
-       visitStreetArt( input: {
+    streetArtId: 2
 
-         streetArtId: 2
+    visited: true
 
-         visited: true
+  }) {
 
-       }) {
+    id
 
-           id
+    favorite
 
-           favorite
+    visited
 
-           visited
+  }
 
-           }
-
-       }`
+}
+```
 
 ---
 
