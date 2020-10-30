@@ -1,20 +1,20 @@
-before_install:
-- gem install bundler
-cache: bundler
-language: ruby
-rbenv:
-- 2.5.3
-addons:
-  postgresql: 9.6
-  chrome: stable
-dist: xenial
-script:
-- yarn
-- bundle exec rails db:{create,migrate} RAILS_ENV=test
-- bundle exec rspec
-deploy:
-  provider: heroku
-  api_key:
-    secure: nUFdnvWiaw5XlEi9ZqugfpF7DEaCUKrHLA//8AJsWIqzvbICUod7LdKAAOtvbStxvC3CSl7HVXaI6GuGGXfdP5enA/O5yjZEllmKFLdmQc9+IG1jR8PGzqR5vRWTSlAMupGrgBaZdwQBclPzudJVYJH/oiGhDQi8NdPldtcHcFA2bv/wZLQXLP2NEBSbuJDpWR1ERav48ZsVxRuIqsP2lDwd+IjEtZDXLlfEGmFY7+T1ynQL6kN84FW/8kaDH8QxdTpdtq7e3cJEkkZAKbBU2+n4Zb8wHdenGXp0ispcdbZv4NH/UWpkk8BG5Iib31MeNq1nF5j9nHxwW0Nul7Rd/M6frNK5C8IvmZcike06dJTVqOHdx4cOrppW5gpNYKqgBxCZQEVpU/l1qEcttesp3cUlM9Mf/NMS0QUL9NoHXHaM9byNYOYT6ZF4V3SP0E6GY4AvOOY264P3gGarl61eF3mQsj9k3W6CC04VlM+/lKEZ8A/6+eU/sfLOUT5sZDQdB07ak/TSvQkHzNw7Eei7no9PWL2X1gU83LNsW80qrIb3WNeOSPUXDsDV6JdIHDaChBPXptIJozYjqHROZdGKwUxKzqONm5RcfK0eKn1PMebHongRMpIh+NP9lI8QCd5aG3a+7lpzZ4buKasmliFuKI8DG/TwEimXU81kcVIzMDk=
-  app: streetwalker-backend
-  run: rails db:migrate
+# before_install:
+# - gem install bundler
+# cache: bundler
+# language: ruby
+# rbenv:
+# - 2.5.3
+# addons:
+#   postgresql: 9.6
+#   chrome: stable
+# dist: xenial
+# script:
+# - yarn
+# - bundle exec rails db:{create,migrate} RAILS_ENV=test
+# - bundle exec rspec
+# deploy:
+#   provider: heroku
+#   api_key:
+#     secure: nUFdnvWiaw5XlEi9ZqugfpF7DEaCUKrHLA//8AJsWIqzvbICUod7LdKAAOtvbStxvC3CSl7HVXaI6GuGGXfdP5enA/O5yjZEllmKFLdmQc9+IG1jR8PGzqR5vRWTSlAMupGrgBaZdwQBclPzudJVYJH/oiGhDQi8NdPldtcHcFA2bv/wZLQXLP2NEBSbuJDpWR1ERav48ZsVxRuIqsP2lDwd+IjEtZDXLlfEGmFY7+T1ynQL6kN84FW/8kaDH8QxdTpdtq7e3cJEkkZAKbBU2+n4Zb8wHdenGXp0ispcdbZv4NH/UWpkk8BG5Iib31MeNq1nF5j9nHxwW0Nul7Rd/M6frNK5C8IvmZcike06dJTVqOHdx4cOrppW5gpNYKqgBxCZQEVpU/l1qEcttesp3cUlM9Mf/NMS0QUL9NoHXHaM9byNYOYT6ZF4V3SP0E6GY4AvOOY264P3gGarl61eF3mQsj9k3W6CC04VlM+/lKEZ8A/6+eU/sfLOUT5sZDQdB07ak/TSvQkHzNw7Eei7no9PWL2X1gU83LNsW80qrIb3WNeOSPUXDsDV6JdIHDaChBPXptIJozYjqHROZdGKwUxKzqONm5RcfK0eKn1PMebHongRMpIh+NP9lI8QCd5aG3a+7lpzZ4buKasmliFuKI8DG/TwEimXU81kcVIzMDk=
+#   app: streetwalker-backend
+#   run: rails db:migrate
